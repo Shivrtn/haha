@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 // import Post from "./post";
 function App() {
@@ -45,6 +45,7 @@ function App() {
     
     
     <div>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>
       <header className="bg-primary p-3 d-flex justify-content-between ">
         <a className="cursor-auto text-light">home </a>
         <a className="cursor-pointer text-light">GAMES</a>
