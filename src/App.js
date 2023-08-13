@@ -23,7 +23,7 @@ function App() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('pass').value;
   
-    fetch("http://localhost:3002/post", {
+    fetch("https://node-6bdz.onrender.com/post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
