@@ -22,7 +22,7 @@ try{
     },
     body: JSON.stringify({ name: name, email: email, pass: password })
   }); alert(await rep.text())}
-  catch(){console.error('err in submition ')}
+  catch(e){console.error('err in submition ')}
 
   
 }
