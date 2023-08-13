@@ -2,43 +2,29 @@
 
 // import Post from "./post";
 function App() {
-  // function Post(){
-  //   const name=document.getElementById('name').value;
-  //   const email=document.getElementById('email').value;
-  //   const password=document.getElementById('pass').value;
+ 
     
-  //   fetch("http://localhost:3002/post",{
-  //       method:"POST",
-  //       headers:{
-  //           "Content-Type":"application/json"
-  //   },
-  //   body:JSON.stringify({name:name,email:email,pass:password})
-  //   }
-  //   ).then(response=>{(response.json())})
-  //   .then(data=>{alert(data)});
-  //   }
+  const handel=async (e) =>{
+    e.preventDefault();
     
-  function Post() {
-    const name = document.getElementById('name').value;
+    const name =document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const password = document.getElementById('pass').value;
+    const password =document.getElementById('pass').value;
   
-    fetch("https://node-6bdz.onrender.com/post", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ name: name, email: email, pass: password })
-    })
-      .then(response => response.json()) // Parse the response as JSON
-      .then(data => {
-        console.log(data); // Log the actual data returned from the server
-        alert(data); // Show the data in an alert or use it as needed
-      })
-      .catch(error => {
-        console.error("Error fetching data:", error); // Handle errors
-      });
-  }
+try{ 
+
+ const rep= await fetch("https://node-6bdz.onrender.com/post", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ name: name, email: email, pass: password })
+  }); alert(await rep.text())}
+  catch(e){console.error('err in submition ')}
+
+  
+}
+
   
   return(
   
@@ -56,7 +42,7 @@ function App() {
         </nav>
 
       <section  className=" col d-flex justify-content-center  align-items-center bg-info">
-        <form onSubmit={Post} className=" px-2 ">
+        <form onSubmit={handel} className=" px-2 ">
           <label className="px-2 col">name:</label>
           <input id="name" required className="px-1"  placeholder="enter your name"></input><br/>
           
